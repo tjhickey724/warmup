@@ -1,0 +1,15 @@
+<template name="layout">
+<div class="container">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="nav navbar-nav navbar-right">
+					{{> loginButtons align="right"}}
+				</ul> 
+			</div>
+		</div>
+	</nav>
+	<h1 class="text-center">Warm Up Quiz   </h1>
+	{{> yield}}
+</div>
+</template>

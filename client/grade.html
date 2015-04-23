@@ -1,0 +1,28 @@
+<template name="grade">
+	<table class="table table-bordered table-hover">
+		<tbody>
+			{{#each answers}}
+				{{> answer}}			
+			{{/each}}
+		</tbody>
+	</table>
+	
+</template>
+
+
+
+
+<template name="answer">
+	<tr>
+		<td>{{student}}</td>
+		<td>{{question}}</td>
+		<td>{{answer}}</td>
+		<td><select name="grade" class="grade">
+			<option {{ungradedSelected}}>ungraded</option>
+			<option {{correctSelected}}>correct</option>
+			<option {{incorrectSelected}}>incorrect</option>
+		</select>
+		</td>
+		<td>{{comment}}</td>
+	</tr>
+</template>
