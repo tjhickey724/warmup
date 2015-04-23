@@ -1,7 +1,10 @@
 Template.welcome.helpers({
-	warmup: function(){return Questions.findOne();}
+	warmup: function(){return Questions.findOne({current:true});},
+	answers: function(){
+		var studentEmail = Meteor.user().emails[0].address;
+		return Answers.find({student:studentEmail})
+		}
 })
-
 
 
 Template.welcome.events({

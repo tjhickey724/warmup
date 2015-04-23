@@ -8,6 +8,11 @@
 		<input type="submit">
 	</form>
 	{{/with}}
+	<ul>
+	{{#each answers}}
+	<li> {{title}}{{question}}{{answer}}{{grade}}</li>
+	{{/each}}
+	</ul>
 {{else}}
 <h2 class="text-center">Please log in to see the problem of the day!</h2>
 {{/if}}

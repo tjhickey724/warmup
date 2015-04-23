@@ -24,3 +24,20 @@ Template.createquestion.events({
 	}
 		
 });
+
+Template.question.helpers({
+	checked: function(){
+	if (this.current) return "checked"; else return"";}
+	
+	})
+	
+Template.question.events({
+	"change .current-question": function(event){
+		var theCurrentValue = event.target.checked;		
+		console.log("theCurrentValue="  + theCurrentValue);
+		Questions.update(this._id,{$set:{current:theCurrentValue}});
+		
+		
+	}
+		
+});

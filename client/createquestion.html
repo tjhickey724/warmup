@@ -15,12 +15,25 @@
 	<hr/>
 	<hr/>
 	
-	<table class="table table-hover">
+
+
+
+<table class="table table-hover">
 		<tbody>
 			
 		{{#each questions}}
-			<tr><td>{{title}}</td><td> {{question}}</td><td>{{whenCreated}}</td><td>{{current}}</td></tr>
+		{{>question}}
 		{{/each}}
 		</tbody>
 	</table>
+
+</template>
+<template name="question">
+
+	<tr>
+		<td>{{title}}</td>
+		<td> {{question}}</td>
+		<td>{{whenCreated}}</td>
+		<td><input type="checkbox" class="current-question" {{checked}}>{{current}}</td></tr>
+
 </template>
