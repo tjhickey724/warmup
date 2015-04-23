@@ -1,14 +1,16 @@
 <template name="answersByStudent">
-Answers by Student
 
-<select>
-{{#each students}}
-{{> studentoption}}
+<table class="table table-striped table-hover">
+<tbody>
+{{#each answers}}
+{{> answerRow2}}
+
 
 
 
 {{/each}}
-</select>
+</tbody>
+</table>
 </template>
 
 
