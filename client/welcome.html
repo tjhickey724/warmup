@@ -8,11 +8,28 @@
 		<input type="submit">
 	</form>
 	{{/with}}
-	<ul>
+	<table class="table table-striped table-hover">
+	<thead>
+	<td> Title</td>
+	<td> Question</td>
+	<td>Your Answer</td>
+	<td>Your Grade</td>
+	<td>Date</td>
+	</thead>
+	<tbody>
 	{{#each answers}}
-	<li> {{title}}{{question}}{{answer}}{{grade}}</li>
+	<tr> 
+	
+	<td>{{title}}</td>
+	<td>{{question}}</td>
+	<td>{{answer}}</td>
+	<td>{{grade}}</td>
+	<td>{{date}}</td>
+	</tr>
 	{{/each}}
-	</ul>
+	
+	</tbody>
+	</table>
 {{else}}
 <h2 class="text-center">Please log in to see the problem of the day!</h2>
 {{/if}}

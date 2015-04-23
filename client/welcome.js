@@ -23,12 +23,12 @@ Template.welcome.events({
 		console.log("thedate = "+theDate);
 		
 		var answerDoc = Answers.findOne({question:this.question, student:studentEmail});
-		
+		var myAnswer = {question:this.question, student:studentEmail, answer:theAnswer, grade:"ungraded", comment:"", date:theDate};
 		if (answerDoc == undefined) {
-			Answers.insert({question:this.question, student:studentEmail, answer:theAnswer, grade:"ungraded", comment:"" });
+			Answers.insert(myAnswer);
 		} else {
 		// user a Meteor.method to upsert this query based on the question and student ...
-			Answers.update(answerDoc._id,{question:this.question, student:studentEmail, answer:theAnswer, grade:"ungraded", comment:"" });
+			Answers.update(answerDoc._id,myAnswer);
 		}
 		
 		$("#chatinput").val("");
