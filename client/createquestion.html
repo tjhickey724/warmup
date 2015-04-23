@@ -1,0 +1,26 @@
+<template name="createquestion">
+	
+	<form id="createquestion">
+	  <div class="form-group">
+	    <label for="title">Title</label>
+	    <input type="text" class="form-control" name="title" id="title" placeholder="Enter title">
+	  </div>
+	  <div class="form-group">
+	    <label for="question">Question</label>
+	    <input type="text" class="form-control" name="question" id="question" placeholder="Enter Question">
+	  </div>
+	  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	
+	<hr/>
+	<hr/>
+	
+	<table class="table table-hover">
+		<tbody>
+			
+		{{#each questions}}
+			<tr><td>{{title}}</td><td> {{question}}</td><td>{{whenCreated}}</td><td>{{current}}</td></tr>
+		{{/each}}
+		</tbody>
+	</table>
+</template>
