@@ -1,0 +1,21 @@
+<template name="answersByQuestion">
+Answers by Question
+
+
+<ol>
+{{#each questions}}
+{{> questionOption}}
+
+
+
+{{/each}}
+</ol>
+</template>
+
+
+<template name="questionOption">
+<li>
+<a href="{{pathFor 'questionAnswers'}}">{{question}}</a>
+</li>
+
+</template>

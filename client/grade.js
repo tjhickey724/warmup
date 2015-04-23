@@ -1,5 +1,8 @@
 Template.grade.helpers({
-	answers:function(){return Answers.find({});}
+	answers:function(){return Answers.find({}, {sort:{grade:-1, date:-1}});},
+	isTeacher: function(){
+		var studentEmail = Meteor.user().emails[0].address;
+		return (studentEmail=="dapike13@gmail.com")|| (studentEmail=="tjhickey@brandeis.edu");}
 })
 
 

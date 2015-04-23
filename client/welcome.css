@@ -1,0 +1,9 @@
+.answer-ungraded{
+	background-color:yellow;
+}
+.answer-correct{
+	background-color:green
+}
+.answer-incorrect{
+	background-color:red;
+}

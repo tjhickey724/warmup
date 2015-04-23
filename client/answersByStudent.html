@@ -1,0 +1,20 @@
+<template name="answersByStudent">
+Answers by Student
+
+<select>
+{{#each students}}
+{{> studentoption}}
+
+
+
+{{/each}}
+</select>
+</template>
+
+
+<template name="studentoption">
+<option>
+{{email}}
+</option>
+
+</template>

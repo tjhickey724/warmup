@@ -1,4 +1,5 @@
 <template name="grade">
+{{#if isTeacher}}
 	<table class="table table-bordered table-hover">
 		<tbody>
 			{{#each answers}}
@@ -6,7 +7,9 @@
 			{{/each}}
 		</tbody>
 	</table>
-	
+	{{else}}
+	<h1> You must be a Teacher to grade problems</h1>
+	{{/if}}
 </template>
 
 
@@ -17,12 +20,13 @@
 		<td>{{student}}</td>
 		<td>{{question}}</td>
 		<td>{{answer}}</td>
-		<td><select name="grade" class="grade">
+		<td class="answer-{{grade}}"><select name="grade" class="grade">
 			<option {{ungradedSelected}}>ungraded</option>
 			<option {{correctSelected}}>correct</option>
 			<option {{incorrectSelected}}>incorrect</option>
 		</select>
 		</td>
 		<td>{{comment}}</td>
+		<td>{{date}}</td>
 	</tr>
 </template>

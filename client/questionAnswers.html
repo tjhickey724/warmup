@@ -1,0 +1,21 @@
+<template name="questionAnswers">
+
+<table class="table">
+{{#each answers qid}}
+{{> answerRow2}}
+
+
+{{/each}}
+
+</table>
+</template>
+<template name="answerRow2">
+	<tr>
+		<td>{{student}}</td>
+		<td>{{question}}</td>
+		<td>{{answer}}</td>
+		<td class="answer-{{grade}}">{{grade}}</td> 
+		<td>{{comment}}</td>
+		<td>{{date}}</td>
+	</tr>
+</template>

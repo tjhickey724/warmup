@@ -23,7 +23,7 @@ Template.welcome.events({
 		console.log("thedate = "+theDate);
 		
 		var answerDoc = Answers.findOne({question:this.question, student:studentEmail});
-		var myAnswer = {question:this.question, student:studentEmail, answer:theAnswer, grade:"ungraded", comment:"", date:theDate};
+		var myAnswer = {question:this.question, qid:this._id, student:studentEmail, answer:theAnswer, grade:"ungraded", comment:"", date:theDate};
 		if (answerDoc == undefined) {
 			Answers.insert(myAnswer);
 		} else {

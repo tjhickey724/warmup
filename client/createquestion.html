@@ -1,5 +1,5 @@
 <template name="createquestion">
-	
+	{{#if isTeacher}}
 	<form id="createquestion">
 	  <div class="form-group">
 	    <label for="title">Title</label>
@@ -27,7 +27,11 @@
 		</tbody>
 	</table>
 
+{{else}}
+<h1>You must be a Teacher to see this page</h1>
+{{/if}}
 </template>
+
 <template name="question">
 
 	<tr>
